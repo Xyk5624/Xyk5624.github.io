@@ -1,0 +1,23 @@
+.App, #root {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* .App {
+  background-color: #0d1117;
+} */
+
+.content-container {
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+.content-container:first-of-type {
+  margin-top: 60px;
+}
+
+.content-container:last-of-type {
+  border: none;
+}

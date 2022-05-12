@@ -1,0 +1,96 @@
+.showcard {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    perspective: 1000;
+    transform-origin: 50% 50%;
+}
+
+@media (max-width: 991.98px) {
+    .showcard {
+        border: 2px solid #303336;
+        border-radius: 10px;
+    }
+
+    .card-image {
+        height: 70%;
+        width: 60%;
+        margin-top: 20px;
+    }
+    
+    .title-show {
+        display: none;
+    }
+
+    .information-list {
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-background{ 
+        height: 95%;
+        width: 100%;
+        /* background-color: rgb(141, 141, 141); */
+        box-shadow: 0 4px 8px rgba(90, 90, 90, 0.5),0 6px 20px 0 rgba(90, 90, 90, 0.3);
+        border: 1px solid #c2c2c2;
+        border-radius: 5px;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition: all 1s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .card-front {
+        overflow: hidden;
+    }
+
+    .showcard:hover .card-front {
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+    }
+
+    .card-back {
+        transform: rotateY(-180deg);
+        overflow: auto;
+    }
+    .showcard:hover .card-back {
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+
+    .card-image {
+        height: 70%;
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    .information-list {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
+}
+
+.card-icon {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 2em;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-icon:hover {
+    cursor: pointer;
+}
